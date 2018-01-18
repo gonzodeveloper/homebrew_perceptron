@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 
-def generatePoints(n):
+def generate_points(n):
     '''
     Creates an array of random but linearly separable points (i.e. feature vectors) in 3 dimensional space.
     X,Y,Z float values are restricted to the range (-1, 1)
@@ -20,32 +20,49 @@ def generatePoints(n):
     :return: features: an array of points
             labels: an array of labels, either 1 or -1
     '''
+
+    return np.random.uniform(low=-1, high=1, size=(n, 3))
+
+
+def generate_labels_linear(features):
+    '''
+
+    :param features:
+    :return:
+    '''
     # Normal vector for linear separation of points
     norm = np.random.uniform(low=-1, high =1, size=3)
 
-    features = np.empty(shape=(n, 3))
-    labels = np.empty(shape=(n, 1))
+    labels = np.empty(shape=len(features))
 
-    for i in range(n):
-        # Create random point
-        point = np.random.uniform(low=-1, high=1, size=3)
+    for i, x in enumerate(features):
         # Determine which side of our normal the point is on
-        lab = np.dot(norm, point)
-
+        lab = np.dot(norm, x)
         if lab > 0:
-            features[i] = point
             labels[i] = 1
         else:
-            features[i] = point
             labels[i] = -1
+    return labels
 
-    return features, labels
+def generate_labels_xor(features):
+    '''
 
-if __name__ == "__main__":
+    :param features:
+    :return:
+    '''
+    labels = np.empty(shape=len(features))
+    for i, x in enumerate(features):
+        if x[0] >= 0 and x[2] >= 0:
+            labels[i] = 1
+        elif x[0] >= 0 and x[2] < 0:
+            labels[i] = -1
+        elif x[0] < 0 and x[2] >= 0:
+            labels[i] = -1
+        elif x[0] < 0 and x[2] < 0:
+            labels[i] = 1
+    return labels
 
-    features, labels = generatePoints(20)
-    model = Perceptron(inputs=3)
-
+def plot_graph(model, features, labels, epochs, dir):
     # Get map our labels to shapes and colors for the graph
     shapes = []
     colors = []
@@ -60,11 +77,15 @@ if __name__ == "__main__":
     count = 1
     # For each iteration the perceptron runs, we plot the points in 3d space as well as the plane of separation
     # which is given by the weights and bias.
-    for weights, bias in model.train(features, labels, epochs=20):
+    for weights, bias in model.train(features, lab_lin, epochs=epochs):
 
         fig = plt.figure()
         ax = fig.add_subplot(111, projection='3d')
         plt.title('Iteration: {}\nWeights: {}\n Bias: {}'.format(count, weights, bias))
+        plt.ioff()
+        ax.set_zlim3d(-1,1)
+        ax.set_xlim3d(-1,1)
+        ax.set_ylim3d(-1,1)
 
         # Plot points
         for i, x in enumerate(features):
@@ -73,10 +94,24 @@ if __name__ == "__main__":
         # The equation of the plane is given by ax + bx + cx + d = 0
         # We know that weights = < a, b, c > and bias = d
         # Use this to solve for z and plot
-        [xx, yy] = np.meshgrid(np.arange(-1,1,0.1), np.arange(-1,1,0.1))
-        z = (-weights[0]*xx - weights[1]*yy - bias)/weights[2]
-        ax.plot_surface(xx, yy, z, color ='g')
-
+        [xx, yy] = np.meshgrid(np.arange(-1, 1, 0.1), np.arange(-1, 1, 0.1))
+        z = (-weights[0] * xx - weights[1] * yy - bias) / weights[2]
+        ax.plot_surface(xx, yy, z, color='g', alpha=0.5)
+        ax.view_init(10, 90)
+        plt.savefig('{}/itration{}'.format(dir, str(count).zfill(2)))
         count += 1
-        plt.savefig('img/itration{}'.format(count))
+
+
+if __name__ == "__main__":
+
+    features = generate_points(50)
+    lab_lin = generate_labels_linear(features)
+    lab_xor = generate_labels_xor(features)
+
+    lin_model = Perceptron(inputs=3)
+    xor_model = Perceptron(inputs=3)
+
+    plot_graph(lin_model, features, lab_lin, epochs=50, dir="lin_img")
+    plot_graph(xor_model, features, lab_xor, epochs=50, dir="xor_img")
+
 

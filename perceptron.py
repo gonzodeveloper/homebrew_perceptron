@@ -15,7 +15,7 @@ class Perceptron:
         :param inputs: number of dimensions in feature vectors
         '''
         self.weights = np.random.uniform(low=-1, high=1, size=inputs)
-        self.bias = random()
+        self.bias = np.random.uniform(low=-1, high=1, size=1)
 
     def activation(self, x):
         '''
