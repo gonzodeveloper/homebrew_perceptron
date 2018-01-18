@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../datasci_commodities/.idea/datasci_commodities.iml" filepath="$PROJECT_DIR$/../datasci_commodities/.idea/datasci_commodities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ml_perceptron.iml" filepath="$PROJECT_DIR$/.idea/ml_perceptron.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7d65c7a9-c8bd-44f0-b1d0-33ffbc37f96d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/.idea/datasci_commodities.iml" afterPath="$PROJECT_DIR$/../datasci_commodities/.idea/datasci_commodities.iml" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/.idea/misc.xml" afterPath="$PROJECT_DIR$/../datasci_commodities/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/.idea/modules.xml" afterPath="$PROJECT_DIR$/../datasci_commodities/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../datasci_commodities/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/README.md" afterPath="$PROJECT_DIR$/../datasci_commodities/README.md" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data.png" afterPath="$PROJECT_DIR$/../datasci_commodities/data.png" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/crops.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/crops.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/gdp.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/gdp.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/gdp_country_raw.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/gdp_country_raw.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/gdp_index_raw.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/gdp_index_raw.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/get_noaa_data.py" afterPath="$PROJECT_DIR$/../datasci_commodities/data/get_noaa_data.py" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/global_weather.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/global_weather.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/livestock.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/livestock.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/noaa_ids.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/noaa_ids.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/out.txt" afterPath="$PROJECT_DIR$/../datasci_commodities/data/out.txt" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/production_crops_raw.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/production_crops_raw.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/production_livestock_raw.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/production_livestock_raw.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/results_df/._SUCCESS.crc" afterPath="$PROJECT_DIR$/../datasci_commodities/data/results_df/._SUCCESS.crc" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/results_df/.part-00000-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv.crc" afterPath="$PROJECT_DIR$/../datasci_commodities/data/results_df/.part-00000-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv.crc" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/results_df/.part-00001-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv.crc" afterPath="$PROJECT_DIR$/../datasci_commodities/data/results_df/.part-00001-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv.crc" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/results_df/.part-00002-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv.crc" afterPath="$PROJECT_DIR$/../datasci_commodities/data/results_df/.part-00002-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv.crc" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/results_df/.part-00003-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv.crc" afterPath="$PROJECT_DIR$/../datasci_commodities/data/results_df/.part-00003-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv.crc" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/results_df/_SUCCESS" afterPath="$PROJECT_DIR$/../datasci_commodities/data/results_df/_SUCCESS" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/results_df/part-00000-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/results_df/part-00000-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/results_df/part-00001-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/results_df/part-00001-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/results_df/part-00002-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/results_df/part-00002-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/data/results_df/part-00003-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv" afterPath="$PROJECT_DIR$/../datasci_commodities/data/results_df/part-00003-4324cb70-b0b8-42c6-b285-600c41233e3f-c000.csv" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/histogram.py" afterPath="$PROJECT_DIR$/../datasci_commodities/histogram.py" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/process.py" afterPath="$PROJECT_DIR$/../datasci_commodities/process.py" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/reshape_tables.py" afterPath="$PROJECT_DIR$/../datasci_commodities/reshape_tables.py" />
+      <change beforePath="$PROJECT_DIR$/../datasci_commodities/visualization.png" afterPath="$PROJECT_DIR$/../datasci_commodities/visualization.png" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="perceptron.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/perceptron.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <element signature="e#156#181#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="683">
+              <caret line="80" column="24" lean-forward="false" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
+              <folding>
+                <element signature="e#194#212#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../datasci_commodities" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/perceptron.py" />
+        <option value="$PROJECT_DIR$/plot.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="width" value="1276" />
+    <option name="height" value="1404" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers ProjectPane="true" />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ml_perceptron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ml_perceptron" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ml_perceptron" type="b2602c69:ProjectViewProjectNode" />
+              <item name="datasci_commodities" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../datasci_commodities" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ml_perceptron" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.plot" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d65c7a9-c8bd-44f0-b1d0-33ffbc37f96d" name="Default" comment="" />
+      <created>1515966617306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1515966617306</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1276" height="1404" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27272728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299923" sideWeight="0.35546875" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299923" sideWeight="0.64453125" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/perceptron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="71" lean-forward="false" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+          <folding>
+            <element signature="e#156#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="55" column="32" lean-forward="false" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+          <folding>
+            <element signature="e#194#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../datasci_commodities/commodities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#30#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perceptron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#156#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="56" lean-forward="false" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <folding>
+            <element signature="e#194#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perceptron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#156#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#194#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perceptron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#156#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#194#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../datasci_commodities/commodities.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#30#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/perceptron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#156#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="80" column="24" lean-forward="false" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
+          <folding>
+            <element signature="e#194#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
