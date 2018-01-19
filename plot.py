@@ -13,22 +13,18 @@ from mpl_toolkits.mplot3d import Axes3D
 
 def generate_points(n):
     '''
-    Creates an array of random but linearly separable points (i.e. feature vectors) in 3 dimensional space.
-    X,Y,Z float values are restricted to the range (-1, 1)
-    Points are given labels, either 1 or -1.
-    :param n: number of points to create
-    :return: features: an array of points
-            labels: an array of labels, either 1 or -1
+    Create n random points in 3D sapce with X, Y, Z values between (-1, 1)
+    :param n: number of random points
+    :return: numpy array of random points (i.e. feature vectors
     '''
-
     return np.random.uniform(low=-1, high=1, size=(n, 3))
 
 
 def generate_labels_linear(features):
     '''
-
-    :param features:
-    :return:
+    Create an array of linearly separable labels for a list of feature vectors in 3D space
+    :param features: list of feature vectors (numpy array)
+    :return: numpy array of labels either 1, or -1 depending on their position in space
     '''
     # Normal vector for linear separation of points
     norm = np.random.uniform(low=-1, high =1, size=3)
@@ -46,9 +42,9 @@ def generate_labels_linear(features):
 
 def generate_labels_xor(features):
     '''
-
-    :param features:
-    :return:
+    Create an array of labels in an XOR pattern in 3D space (+X+Z = 1, +X-Z = -1, -X+Z = -1, -X-Z = 1
+    :param features: list of feature vectors (numpy array)
+    :return: numpy array of labels either 1, or -1 depending on their position in space
     '''
     labels = np.empty(shape=len(features))
     for i, x in enumerate(features):
@@ -63,6 +59,17 @@ def generate_labels_xor(features):
     return labels
 
 def plot_graph(model, features, labels, epochs, dir):
+    '''
+    Plot the feature vectors (i.e. points) in 3D space and the plane of separation as determined by the weights and bias
+    of the model at each iteration. Figures are saved into given directory as "iterationXX.png" where XX = the iteration
+    of the model at that point
+    :param model: Perceptron object
+    :param features: numpy array of 3D feature vectors
+    :param labels: numpy array of corresponding labels
+    :param epochs: max number of iterations to plot
+    :param dir: directory to save
+    :return: N/A
+    '''
     # Get map our labels to shapes and colors for the graph
     shapes = []
     colors = []
