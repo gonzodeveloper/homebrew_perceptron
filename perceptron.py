@@ -5,8 +5,8 @@
 # File: perceptron.py
 # Description: a perceptron that classifies linearly separable points
 
-from random import random
 import numpy as np
+
 class Perceptron:
 
     def __init__(self, inputs):
@@ -25,7 +25,7 @@ class Perceptron:
         '''
         return 1 if np.dot(self.weights, x) + self.bias >= 0 else -1
 
-    def train(self, features, labels, epochs=50):
+    def train(self, features, labels, epochs=50, c=1):
         '''
         Generator Function.
         Yields a series of tuples, each containing alist of weights and bias for each increment of the perceptron.
@@ -33,6 +33,7 @@ class Perceptron:
         :param features: numpy array of feature vectors
         :param labels: numpy array of labels
         :param epochs: number of training iterations for the perceptron
+        :param c: constant multiplier for increments of weight vecotr
         :return: array of weights and a bias constant
         '''
         error_detected = True
@@ -43,7 +44,7 @@ class Perceptron:
             for i, x in enumerate(features):
                 if self.activation(x) != labels[i]:
                     error_detected = True
-                    self.weights += x * labels[i]
-                    self.bias += labels[i]
+                    self.weights += c*(x * labels[i])
+                    self.bias += c*labels[i]
             yield self.weights, self.bias
 
