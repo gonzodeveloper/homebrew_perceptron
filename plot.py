@@ -118,6 +118,6 @@ if __name__ == "__main__":
     lin_model = Perceptron(inputs=3)
     xor_model = Perceptron(inputs=3)
 
-    plot_graph(lin_model, features, lab_lin, epochs=20, dir="lin_img")
-    plot_graph(xor_model, features, lab_xor, epochs=20, dir="xor_img")
+    plot_graph(lin_model, features, lab_lin, epochs=20, dir="img/lin_img")
+    plot_graph(xor_model, features, lab_xor, epochs=20, dir="img/xor_img")
 
