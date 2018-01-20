@@ -84,7 +84,7 @@ def plot_graph(model, features, labels, epochs, dir):
     count = 1
     # For each iteration the perceptron runs, we plot the points in 3d space as well as the plane of separation
     # which is given by the weights and bias.
-    for weights, bias in model.train(features, lab_lin, epochs=epochs, c = .05):
+    for weights, bias in model.train(features, lab_lin, epochs=epochs, c = 10):
 
         fig = plt.figure()
         ax = fig.add_subplot(111, projection='3d')
