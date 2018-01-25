@@ -9,13 +9,19 @@ import numpy as np
 
 class Perceptron:
 
-    def __init__(self, inputs):
+    def __init__(self, inputs, zeros=False):
         '''
-        Contructor gives perceptron random weights and random bias
+        Contructor gives perceptron zeros for weights and bias
         :param inputs: number of dimensions in feature vectors
+        :param zeros: if true then weights and bias are set to zero, otherwise they are assigned random values
         '''
-        self.weights = np.random.uniform(low=-1, high=1, size=inputs)
-        self.bias = np.random.uniform(low=-1, high=1, size=1)
+        if zeros:
+            self.weights = np.zeros(inputs)
+            self.bias = np.zeros(1)
+        else:
+            self.weights = np.random.uniform(low=-1, high=1, size=inputs)
+            self.bias = np.random.uniform(low=-1, high=1, size=1)
+
 
     def activation(self, x):
         '''
@@ -25,7 +31,10 @@ class Perceptron:
         '''
         return 1 if np.dot(self.weights, x) + self.bias >= 0 else -1
 
-    def train(self, features, labels, epochs=50, c=1):
+
+
+    # Temporarily NOT a generator function, will NOT work in plot.py unless uncomment line 59
+    def train(self, features, labels, epochs=10000, c=1):
         '''
         Generator Function.
         Yields a series of tuples, each containing alist of weights and bias for each increment of the perceptron.
@@ -34,7 +43,8 @@ class Perceptron:
         :param labels: numpy array of labels
         :param epochs: number of training iterations for the perceptron
         :param c: constant multiplier for increments of weight vecotr
-        :return: array of weights and a bias constant
+        :yields array of weights and a bias constant for each iteration of perceptron
+        :return: number of iterations to convergence
         '''
         error_detected = True
         itr = 0
@@ -46,5 +56,7 @@ class Perceptron:
                     error_detected = True
                     self.weights += c*(x * labels[i])
                     self.bias += c*labels[i]
-            yield self.weights, self.bias
+            # yield self.weights, self.bias
+        return itr
+
 

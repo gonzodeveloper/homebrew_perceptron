@@ -9,5 +9,6 @@
     <orderEntry type="library" name="R User Library" level="project" />
     <orderEntry type="library" name="R Skeletons" level="application" />
     <orderEntry type="module" module-name="datasci_commodities" />
+    <orderEntry type="module" module-name="db_parallel_ddl" />
   </component>
 </module>
