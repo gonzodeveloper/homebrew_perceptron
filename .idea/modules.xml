@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../datasci_commodities/.idea/datasci_commodities.iml" filepath="$PROJECT_DIR$/../datasci_commodities/.idea/datasci_commodities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../datasci_movies/.idea/datasci_movies.iml" filepath="$PROJECT_DIR$/../datasci_movies/.idea/datasci_movies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../datasci_stockstats/.idea/datasci_stockstats.iml" filepath="$PROJECT_DIR$/../datasci_stockstats/.idea/datasci_stockstats.iml" />
       <module fileurl="file://$PROJECT_DIR$/../db_parallel_ddl/.idea/db_parallel_ddl.iml" filepath="$PROJECT_DIR$/../db_parallel_ddl/.idea/db_parallel_ddl.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ml_perceptron.iml" filepath="$PROJECT_DIR$/.idea/ml_perceptron.iml" />
     </modules>

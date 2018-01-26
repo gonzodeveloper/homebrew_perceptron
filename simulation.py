@@ -1,9 +1,9 @@
 from perceptron import Perceptron
 from plot import Plotter
 import pandas as pd
+from sklearn.model_selection import train_test_split
 
-
-def simulation(x, test_range, step_size, file):
+def simulation(x, test_range, step_size, file, n = 100, runs = 1000, dim = 2, learn_rate = 1):
     '''
     Function runs a series of simulations with the perceptron on a number or randomly generated feature vectors.
     Depending on which variable we are controlling for the simulations fix the values for dimensionality, number of points, and learning rate (c value)
@@ -17,20 +17,15 @@ def simulation(x, test_range, step_size, file):
     :param file: save destination for csv
     :return: N/A
     '''
-    (low, high) = test_range
-    # Number or simulations run for each step_size
-    runs = 1000
-    # default values
-    n = 100
-    dim = 2
-    learn_rate = 1
     # check for invalid x
     if x not in ['n', 'c', 'dim']:
         raise ValueError('Invalid parameter x')
 
+    (low, high) = test_range
     val = low
     data = []
     plot = Plotter()
+
     while val < high:
         # Increment independent variable
         if x == 'n':
@@ -43,7 +38,7 @@ def simulation(x, test_range, step_size, file):
         for i in range(runs):
             features = plot.generate_points(n, dim)
             labels = plot.generate_labels_linear(features)
-            model = Perceptron(dim, zeros=True)
+            model = Perceptron(dim, zeros=False)
             iterations = model.train(features,labels, c=learn_rate)
             data.append([n, dim, learn_rate, iterations])
         val += step_size
@@ -52,12 +47,38 @@ def simulation(x, test_range, step_size, file):
     df = pd.DataFrame(data, columns=['n features', 'dimensions', 'c', 'iterations'])
     df.to_csv(file, sep=',', index=False)
 
-if __name__ == "__main__":
-    print('Simulation: Controlling for c....')
-    simulation('c', test_range=(0.1,10), step_size=.1, file='data/raw_var_c.csv')
-    print('Simulation: Controlling for n....')
-    simulation('n', test_range=(10, 1000), step_size=10, file='data/raw_var_n.csv')
-    print('Simulation: Controlling for dim....')
-    simulation('dim', test_range=(2, 15), step_size=1, file='data/raw_var_dim.csv')
 
+def test_for_error_n(test_range, step_size, learn_rate = 10, dim = 2, runs = 100, file):
+    (low, high) = test_range
+    n = low
+    data = []
+    plot = Plotter()
+    df = pd.DataFrame()
+    while n < high:
+        for i in range(runs):
+            features = plot.generate_points(n, dim)
+            labels = plot.generate_labels_linear(features)
+
+            df['features'] = features.tolist()
+            df['labels'] = labels.tolist()
+            train, test = train_test_split(df, test_size=.25)
+
+            model = Perceptron(dim, zeros=False)
+            model.train(train['features'].as_matrix(), train['labels'].as_matrix(), c=learn_rate)
+            error = model.test(test['features'].as_matrix(), test['labels'].as_matrix())
+            data.append([n, error])
+
+    df = pd.DataFrame(data, columns=['n', 'error'])
+    df.to_csv(file, sep=',', index=False)
+
+if __name__ == "__main__":
+    '''print('Simulation: Controlling for c....')
+    simulation('c', test_range=(0.2,20), step_size=.2, file='data/raw_var_c_non-zero.csv')
+    print('Simulation: Controlling for n....')
+    simulation('n', test_range=(10, 1000), step_size=10, file='data/raw_var_n_non-zero.csv')
+    print('Simulation: Controlling for dim....')
+    simulation('dim', test_range=(2, 15), step_size=1, file='data/raw_var_dim_non-zero.csv')
+    '''
+
+    
     print('Complete')
