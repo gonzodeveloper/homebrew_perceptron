@@ -63,5 +63,5 @@ class Perceptron:
         error_count = 0
         for i, x in enumerate(features):
             if self.activation(x) != labels[i]:
-                error_count +=1
+                error_count += 1
         return error_count/len(features)
