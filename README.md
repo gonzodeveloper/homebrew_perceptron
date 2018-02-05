@@ -8,13 +8,13 @@ This code is an implementation of Dr.Frank Rosenblatt's perceptron algorithm. Co
 
 This depicts an algorithm whose output is determined by a series of inputs(x), weights(w) and bias(w0). We can use this for classification by repeatedly inputing labeled feature vectors, and adjusting the weights and bias accordingly based on whether the output y matches the given labels. This algorithm is given as...
 
-> while error
-> 	error = False
->	for idx, x in features
->		if sgn(x, weights) + bias != labels[i]
->			error = True
->			weights += x * labels[i]
-> 			bias += labels[i]
+	while error
+		error = False
+		for idx, x in features
+			if sgn(x, weights) + bias != labels[i]
+				error = True
+				weights += x * labels[i]
+	 			bias += labels[i]
 
 This is implemented in perceptron.py as part of the train function, which also limits the iteration to a given number of epochs.
 
